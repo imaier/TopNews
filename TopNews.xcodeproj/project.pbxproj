@@ -10,6 +10,7 @@
 		AFE9ADDAB1C53DE03E5D8B91 /* Pods_TopNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7711FA565ADB661F2474F5 /* Pods_TopNews.framework */; };
 		CE6588E525405C7D00F928E9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6588E425405C7D00F928E9 /* WebKit.framework */; };
 		CE72F20024881C6300B99845 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72F1FF24881C6300B99845 /* DetailsViewController.swift */; };
+		CE748384254C32E400314920 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE748383254C32E400314920 /* NewsCollectionViewCell.swift */; };
 		CE93FD0D25417BA900C5CB13 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93FD0C25417BA900C5CB13 /* FilterViewController.swift */; };
 		CE9A7217254185E000B54ADC /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A7216254185E000B54ADC /* FilterData.swift */; };
 		CE9E59652549828300B59091 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E59642549828300B59091 /* StringHelper.swift */; };
@@ -30,6 +31,7 @@
 		1CE2A0F5683C2B9011F2625C /* Pods-TopNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopNews/Pods-TopNews.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6588E425405C7D00F928E9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CE72F1FF24881C6300B99845 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CE748383254C32E400314920 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE93FD0C25417BA900C5CB13 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = TopNews/FilterViewController.swift; sourceTree = SOURCE_ROOT; };
 		CE9A7216254185E000B54ADC /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
 		CE9E59642549828300B59091 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				CEDC7586247591E800CCEF80 /* Main.storyboard */,
 				CE72F1FF24881C6300B99845 /* DetailsViewController.swift */,
 				CEF0C3B8248403EC00975047 /* NewsCellTableViewCell.swift */,
+				CE748383254C32E400314920 /* NewsCollectionViewCell.swift */,
 				CE93FD0C25417BA900C5CB13 /* FilterViewController.swift */,
 				CEDC7589247591E900CCEF80 /* Assets.xcassets */,
 				CEDC758B247591E900CCEF80 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 				CEDC7583247591E800CCEF80 /* AppDelegate.swift in Sources */,
 				CE9A7217254185E000B54ADC /* FilterData.swift in Sources */,
 				CE72F20024881C6300B99845 /* DetailsViewController.swift in Sources */,
+				CE748384254C32E400314920 /* NewsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

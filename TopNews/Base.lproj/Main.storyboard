@@ -31,21 +31,64 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cp1-d0-Wcn">
-                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="itemSize" width="331" height="278"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uNp-oJ-VTr">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCellCollectionViewIdentifier" id="uNp-oJ-VTr" customClass="NewsCollectionViewCell" customModule="TopNews" customModuleProvider="target">
+                                                <rect key="frame" x="41.5" y="0.0" width="331" height="278"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MRQ-lv-yDp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="331" height="278"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="755" horizontalCompressionResistancePriority="248" verticalCompressionResistancePriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="Q7x-rX-YK9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="278"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="278" id="clD-e0-Dw3"/>
+                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="331" id="db2-Yd-VQ4"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-Pi-CsK">
+                                                            <rect key="frame" x="147" y="120.5" width="37" height="37"/>
+                                                        </activityIndicatorView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIy-db-XHa">
+                                                            <rect key="frame" x="149" y="249.5" width="33.5" height="20.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="DIy-db-XHa" firstAttribute="centerX" secondItem="Q7x-rX-YK9" secondAttribute="centerX" id="0ko-Es-xKq"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DIy-db-XHa" secondAttribute="trailing" id="6hF-OH-vHU"/>
+                                                        <constraint firstItem="jyc-Pi-CsK" firstAttribute="centerY" secondItem="Q7x-rX-YK9" secondAttribute="centerY" id="EbJ-0a-a6O"/>
+                                                        <constraint firstItem="DIy-db-XHa" firstAttribute="bottom" secondItem="Q7x-rX-YK9" secondAttribute="bottom" constant="-8" id="PVm-qU-CAx"/>
+                                                        <constraint firstItem="DIy-db-XHa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MRQ-lv-yDp" secondAttribute="leading" id="QIA-6G-dIy"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Q7x-rX-YK9" secondAttribute="bottom" id="Slr-zM-8Zm"/>
+                                                        <constraint firstItem="Q7x-rX-YK9" firstAttribute="top" secondItem="MRQ-lv-yDp" secondAttribute="top" id="dCg-am-iJA"/>
+                                                        <constraint firstItem="Q7x-rX-YK9" firstAttribute="leading" secondItem="MRQ-lv-yDp" secondAttribute="leading" id="g8k-QP-h8A"/>
+                                                        <constraint firstItem="DIy-db-XHa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MRQ-lv-yDp" secondAttribute="top" id="gOn-uc-bkA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Q7x-rX-YK9" secondAttribute="trailing" id="hGE-4M-wCj"/>
+                                                        <constraint firstItem="jyc-Pi-CsK" firstAttribute="centerX" secondItem="Q7x-rX-YK9" secondAttribute="centerX" id="n7n-mc-A7f"/>
+                                                    </constraints>
                                                 </collectionViewCellContentView>
+                                                <size key="customSize" width="331" height="278"/>
+                                                <connections>
+                                                    <outlet property="activityIndicator" destination="jyc-Pi-CsK" id="AEF-LL-SMY"/>
+                                                    <outlet property="newsImageView" destination="Q7x-rX-YK9" id="nRJ-lp-57A"/>
+                                                    <outlet property="titleLabel" destination="DIy-db-XHa" id="YSx-dh-3C3"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ig4-d8-UbG" id="d5N-w5-6Eh"/>
+                                            <outlet property="delegate" destination="ig4-d8-UbG" id="0M7-ip-cLI"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -181,11 +224,18 @@
                                     <segue destination="UqT-JI-RBP" kind="show" identifier="filterSeque" id="GA4-t1-3d6"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="View" id="OeU-qb-aLE"/>
+                            <barButtonItem title="View" id="OeU-qb-aLE">
+                                <connections>
+                                    <action selector="changeView:" destination="ig4-d8-UbG" id="I8Q-Uy-abs"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="collecionView" destination="Mtk-yc-l84" id="vbD-O9-HWT"/>
                         <outlet property="searchBar" destination="HtC-Mk-DGn" id="Ql4-ld-E7H"/>
+                        <outlet property="substrateCollectionView" destination="yJE-tE-KJw" id="Wan-sw-FzM"/>
+                        <outlet property="substrateTableView" destination="EOL-R6-klx" id="xVf-bc-KoI"/>
                         <outlet property="tableView" destination="S9n-kH-Seq" id="x5D-Tm-li0"/>
                         <segue destination="RrV-EO-xHc" kind="show" identifier="detailsSegue" id="Prg-sk-f9k"/>
                     </connections>

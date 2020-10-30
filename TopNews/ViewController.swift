@@ -10,9 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FilterViewControllerDelegate, UISearchBarDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FilterViewControllerDelegate, UISearchBarDelegate, UICollectionViewDataSource,  UICollectionViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collecionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var substrateTableView: UIView!
+    @IBOutlet weak var substrateCollectionView: UIView!
     
     var totalResults = 0
     
@@ -24,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        changeView(self)
         self.applyFilterAndReloadData()
         
         //tableView.rowHeight = UITableView.automaticDimension
@@ -102,7 +106,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             filteredArray = newsArray
         }
-        self.tableView.reloadData()
+        if !substrateTableView.isHidden {
+            self.tableView.reloadData()
+        } else {
+            self.collecionView.reloadData()
+        }
     }
     
     // Return the number of rows for the table.
@@ -202,5 +210,62 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         applyFilter()
     }
     
+    @IBAction func changeView(_ sender: Any) {
+        substrateCollectionView.isHidden = !substrateCollectionView.isHidden
+        substrateTableView.isHidden = !substrateCollectionView.isHidden
+        self.applyFilter()
+    }
+    
+    // MARK: - UICollectionViewDataSource
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.filteredArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newsCellCollectionViewIdentifier", for: indexPath)
+        let newsCell = cell as! NewsCollectionViewCell
+        
+        if (indexPath.row == self.filteredArray.count - 1) && self.newsArray.count < self.totalResults {
+            //load next page
+            let pageNum = self.newsArray.count / self.filter.pageSize;
+            DispatchQueue.global().async {
+                self.applyFilterAndReloadData(pageNum+1);
+            }
+        }
+        
+        let news = self.filteredArray[indexPath.row]
+        // Configure the cell’s contents.
+        newsCell.titleLabel.text = news.title
+        newsCell.imageUrl =  news.urlToImage
+        newsCell.newsImageView.image = nil
+        newsCell.activityIndicator.startAnimating()
+        newsCell.activityIndicator.isHidden = false
+        newsCell.activityIndicator.hidesWhenStopped = true
+
+        
+        CachedDataLoader.shared.loadImage(url: newsCell.imageUrl) { (url:String, image: UIImage?) in
+            if url == newsCell.imageUrl {
+                if let img = image {
+                    newsCell.newsImageView.image = img
+                }
+                
+                newsCell.activityIndicator.stopAnimating();
+            }
+        }
+        
+        return cell
+    }
+    
+    // MARK: - UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row < self.newsArray.count {
+            let news = self.filteredArray[indexPath.row]
+            self.performSegue(withIdentifier: "detailsSegue", sender: news)
+        }
+    }
 }
 
