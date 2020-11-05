@@ -12,20 +12,20 @@ import UIKit
 class CachedDataLoader {
     static let shared = CachedDataLoader()
 
-    fileprivate var cache: Dictionary<String,Data> = [:]
-    
-    func loadImage(url:String, comletition:@escaping (_ url:String,_ image:UIImage?)-> ()) {
+    fileprivate var cache: [String: Data] = [:]
+
+    func loadImage(url: String, comletition:@escaping (_ url: String, _ image: UIImage?)-> Void) {
         if let data = self.cache[url] {
             let img = UIImage.init(data: data)
-            comletition(url, img);
+            comletition(url, img)
         } else {
             if let imgUrl = URL(string: url) {
-                let task = URLSession.shared.dataTask(with: imgUrl )  { (data :Data?, response: URLResponse?, error: Error?) in
+                let task = URLSession.shared.dataTask(with: imgUrl ) { (data: Data?, _: URLResponse?, _: Error?) in
                     if let data = data {
                         let img = UIImage.init(data: data)
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
                             self.cache[url] = data
-                            comletition(url, img);
+                            comletition(url, img)
                         })
                     } else {
                         DispatchQueue.main.async {
@@ -39,17 +39,17 @@ class CachedDataLoader {
             }
         }
     }
-    
-    func loadData(url:String, comletition:@escaping (_ url:String,_ data :Data?)-> ()) {
+
+    func loadData(url: String, comletition:@escaping (_ url: String, _ data: Data?)-> Void) {
         if let data = self.cache[url] {
-            comletition(url, data);
+            comletition(url, data)
         } else {
             if let dataUrl = URL(string: url) {
-                let task = URLSession.shared.dataTask(with: dataUrl)  { (data :Data?, response: URLResponse?, error: Error?) in
+                let task = URLSession.shared.dataTask(with: dataUrl) { (data: Data?, _: URLResponse?, _: Error?) in
                     if let data = data {
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
                             self.cache[url] = data
-                            comletition(url, data);
+                            comletition(url, data)
                         })
                     } else {
                         DispatchQueue.main.async {

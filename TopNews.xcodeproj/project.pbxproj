@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		CE9A7217254185E000B54ADC /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A7216254185E000B54ADC /* FilterData.swift */; };
 		CE9E59652549828300B59091 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E59642549828300B59091 /* StringHelper.swift */; };
 		CE9E59672549A68D00B59091 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E59662549A68D00B59091 /* News.swift */; };
+		CEA2EF87255419EE00551A45 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CEA2EF86255419EE00551A45 /* .swiftlint.yml */; };
 		CEDC7583247591E800CCEF80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC7582247591E800CCEF80 /* AppDelegate.swift */; };
 		CEDC7585247591E800CCEF80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC7584247591E800CCEF80 /* ViewController.swift */; };
 		CEDC7588247591E800CCEF80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC7586247591E800CCEF80 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		CE9A7216254185E000B54ADC /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
 		CE9E59642549828300B59091 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		CE9E59662549A68D00B59091 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		CEA2EF86255419EE00551A45 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		CEDC757F247591E800CCEF80 /* TopNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC7582247591E800CCEF80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDC7584247591E800CCEF80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE44194F255163180017660A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE441950255163320017660A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		CE441951255163410017660A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		CE6588E62540679700F928E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,7 @@
 		CEDC7576247591E800CCEF80 = {
 			isa = PBXGroup;
 			children = (
+				CEA2EF86255419EE00551A45 /* .swiftlint.yml */,
 				CEF9043F2475A5BB006E93E7 /* Podfile */,
 				CEDC7581247591E800CCEF80 /* TopNews */,
 				CEDC7580247591E800CCEF80 /* Products */,
@@ -102,6 +126,9 @@
 		CEDC7581247591E800CCEF80 /* TopNews */ = {
 			isa = PBXGroup;
 			children = (
+				CE441951255163410017660A /* Filter */,
+				CE441950255163320017660A /* Details */,
+				CE44194F255163180017660A /* Main */,
 				CE6588E62540679700F928E9 /* Models */,
 				CEDC7582247591E800CCEF80 /* AppDelegate.swift */,
 				CEDC7584247591E800CCEF80 /* ViewController.swift */,
@@ -135,6 +162,7 @@
 			buildConfigurationList = CEDC7591247591E900CCEF80 /* Build configuration list for PBXNativeTarget "TopNews" */;
 			buildPhases = (
 				3D1313FE7586D93A1762847C /* [CP] Check Pods Manifest.lock */,
+				CEA2EF852554185800551A45 /* ShellScript */,
 				CEDC757B247591E800CCEF80 /* Sources */,
 				CEDC757C247591E800CCEF80 /* Frameworks */,
 				CEDC757D247591E800CCEF80 /* Resources */,
@@ -187,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA2EF87255419EE00551A45 /* .swiftlint.yml in Resources */,
 				CEDC758D247591E900CCEF80 /* LaunchScreen.storyboard in Resources */,
 				CEDC758A247591E900CCEF80 /* Assets.xcassets in Resources */,
 				CEF904402475A5BB006E93E7 /* Podfile in Resources */,
@@ -203,22 +232,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D1313FE7586D93A1762847C /* [CP] Check Pods Manifest.lock */ = {
@@ -242,6 +264,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CEA2EF852554185800551A45 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

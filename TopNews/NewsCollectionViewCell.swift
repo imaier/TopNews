@@ -12,5 +12,5 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    var imageUrl = "";
+    var imageUrl = ""
 }

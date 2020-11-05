@@ -15,11 +15,11 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var desriptionLabel: UILabel!
-    
+
     @IBOutlet weak var webView: WKWebView!
-    
-    var news: News? = nil
-    
+
+    var news: News?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //let webConfiguration = WKWebViewConfiguration()
@@ -27,20 +27,19 @@ class DetailsViewController: UIViewController {
         //wkWebView.uiDelegate = self
         //view = webView
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if let rec = self.news {
             //let myURL = URL(string:"https://www.apple.com")
-            let myURL = URL(string:rec.url)
+            let myURL = URL(string: rec.url)
             let myRequest = URLRequest(url: myURL!)
             webView.load(myRequest)
-            
+
         }
 
     }
-    
 
     /*
     // MARK: - Navigation

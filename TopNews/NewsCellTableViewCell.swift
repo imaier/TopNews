@@ -17,8 +17,8 @@ class NewsCellTableViewCell: UITableViewCell {
     @IBOutlet weak var heightMax: NSLayoutConstraint!
     @IBOutlet weak var heightMin: NSLayoutConstraint!
 
-    var imageUrl = "";
-    
+    var imageUrl = ""
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

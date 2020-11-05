@@ -34,7 +34,6 @@ import Foundation
  
  */
 
-
 extension StringProtocol {
     func index<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> Index? {
         range(of: string, options: options)?.lowerBound
@@ -59,7 +58,6 @@ extension StringProtocol {
     }
 }
 
-
 extension String {
 
     func contains(subString string: String, options: String.CompareOptions = []) -> Bool {
@@ -68,4 +66,3 @@ extension String {
     }
 
 }
-

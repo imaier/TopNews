@@ -1,0 +1,10 @@
+disabled_rules:
+- colon
+- comma
+- control_statement
+
+excluded:
+- Carthage
+- Pods
+- Source/ExcludedFolder
+- Source/ExcludedFile.swift

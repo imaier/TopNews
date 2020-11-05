@@ -107,33 +107,33 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCellCustomIdentifier" id="Usp-aO-Ayj" customClass="NewsCellTableViewCell" customModule="TopNews" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="93.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Usp-aO-Ayj" id="jNR-4j-cwI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="755" horizontalCompressionResistancePriority="248" verticalCompressionResistancePriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="rKc-sY-1Uu">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="755" horizontalCompressionResistancePriority="248" verticalCompressionResistancePriority="248" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKc-sY-1Uu">
                                                             <rect key="frame" x="0.0" y="0.0" width="364.5" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="07p-MD-FJ4"/>
                                                                 <constraint firstAttribute="height" constant="60" id="sgq-yz-OqT"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="253" horizontalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyA-rv-PAf">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="253" horizontalCompressionResistancePriority="751" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyA-rv-PAf">
                                                             <rect key="frame" x="372.5" y="0.0" width="33.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" placeholderIntrinsicWidth="74" placeholderIntrinsicHeight="17" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivE-tO-j5I">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" ambiguous="YES" placeholderIntrinsicWidth="74" placeholderIntrinsicHeight="17" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivE-tO-j5I">
                                                             <rect key="frame" x="8" y="68" width="398" height="17.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Nxm-Ug-Fl0">
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Nxm-Ug-Fl0">
                                                             <rect key="frame" x="164" y="11.5" width="37" height="37"/>
                                                         </activityIndicatorView>
                                                     </subviews>
@@ -161,7 +161,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newsCellIdentifier" textLabel="vTc-ai-McV" detailTextLabel="Ec4-Md-6Ry" style="IBUITableViewCellStyleSubtitle" id="4ic-A5-1cc">
-                                                <rect key="frame" x="0.0" y="121.5" width="414" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="71.5" width="414" height="55.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ic-A5-1cc" id="IdV-HH-rs0">
                                                     <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
@@ -218,6 +218,11 @@
                         <viewLayoutGuide key="safeArea" id="uxN-Tg-L07"/>
                     </view>
                     <navigationItem key="navigationItem" title="Top News" id="Tz0-1b-K5T">
+                        <barButtonItem key="leftBarButtonItem" title="sort" id="qKP-If-VPD">
+                            <connections>
+                                <action selector="sortItems:" destination="ig4-d8-UbG" id="xn1-4G-gAZ"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Filter" id="eZX-ir-qQR">
                                 <connections>
@@ -234,6 +239,7 @@
                     <connections>
                         <outlet property="collecionView" destination="Mtk-yc-l84" id="vbD-O9-HWT"/>
                         <outlet property="searchBar" destination="HtC-Mk-DGn" id="Ql4-ld-E7H"/>
+                        <outlet property="sortBarButton" destination="qKP-If-VPD" id="k4m-GS-Bgl"/>
                         <outlet property="substrateCollectionView" destination="yJE-tE-KJw" id="Wan-sw-FzM"/>
                         <outlet property="substrateTableView" destination="EOL-R6-klx" id="xVf-bc-KoI"/>
                         <outlet property="tableView" destination="S9n-kH-Seq" id="x5D-Tm-li0"/>
@@ -307,6 +313,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDM-5B-fAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="pRB-xZ-anj">
+                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
             </objects>
             <point key="canvasLocation" x="563.768115942029" y="-199.55357142857142"/>
         </scene>

@@ -8,4 +8,5 @@ target 'TopNews' do
     # Pods for TopNews
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'SwiftLint'
 end
